@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Room" table="Room">
+
+          <!-- 主键房间id -->
+          <id name="roomId" column="roomId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 多对一属性: 所在宿舍 -->
+          <many-to-one name="houseObj"
+            column="houseObj"
+            class="House"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 房间名称 -->
+          <property
+            name="roomName"
+            column="roomName"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单整型属性: 床位数 -->
+          <property
+            name="bedNum"
+            column="bedNum"
+            type="int"
+
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

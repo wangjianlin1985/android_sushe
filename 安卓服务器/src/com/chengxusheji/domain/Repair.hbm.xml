@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Repair" table="Repair">
+
+          <!-- 主键报修id -->
+          <id name="repairId" column="repairId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 多对一属性: 报修类别 -->
+          <many-to-one name="repaiClassObj"
+            column="repaiClassObj"
+            class="RepairClass"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 故障简述 -->
+          <property
+            name="repaitTitle"
+            column="repaitTitle"
+            type="string"
+            length="60"
+          />
+
+          <!-- 简单字符串属性: 故障详述 -->
+          <property
+            name="repairContent"
+            column="repairContent"
+            type="string"
+            length="500"
+          />
+
+          <!-- 多对一属性: 上报学生 -->
+          <many-to-one name="studentObj"
+            column="studentObj"
+            class="Student"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 处理结果 -->
+          <property
+            name="handleResult"
+            column="handleResult"
+            type="string"
+            length="500"
+          />
+
+          <!-- 多对一属性: 维修状态 -->
+          <many-to-one name="repairStateObj"
+            column="repairStateObj"
+            class="RepairState"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

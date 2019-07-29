@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	
+	
+	<!-- 指定spring的配置文件，默认从web根目录寻找配置文件，我们可以通过spring提供的classpath:前缀指定从类路径下寻找 -->
+	<context-param>
+	   <param-name>contextConfigLocation</param-name>
+	   <param-value>classpath:beans.xml</param-value>
+	</context-param>
+	
+	
+	<!-- 对Spring容器进行实例化 -->
+	<listener>
+	      <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	
+	<!-- struts启用配置 -->
+	<filter>
+	      <filter-name>struts2</filter-name> 
+        <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>*.action</url-pattern>
+    </filter-mapping>
+    
+    
+    <!-- 登录验证servlet配置 -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+      
+    <!-- 用户注册servlet配置 -->
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    
+    <!-- 上传图片servlet配置 -->
+    <servlet>
+        <servlet-name>UpPhotoServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.UpPhotoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpPhotoServlet</servlet-name>
+        <url-pattern>/UpPhotoServlet</url-pattern>
+    </servlet-mapping> 
+    
+    <!-- 学生信息管理servlet配置 -->
+    <servlet>
+        <servlet-name>StudentServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.StudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StudentServlet</servlet-name>
+        <url-pattern>/StudentServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 宿舍楼管理servlet配置 -->
+    <servlet>
+        <servlet-name>HouseServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.HouseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HouseServlet</servlet-name>
+        <url-pattern>/HouseServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 房间信息管理servlet配置 -->
+    <servlet>
+        <servlet-name>RoomServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.RoomServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RoomServlet</servlet-name>
+        <url-pattern>/RoomServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 报修信息管理servlet配置 -->
+    <servlet>
+        <servlet-name>RepairServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.RepairServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RepairServlet</servlet-name>
+        <url-pattern>/RepairServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 维修状态管理servlet配置 -->
+    <servlet>
+        <servlet-name>RepairStateServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.RepairStateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RepairStateServlet</servlet-name>
+        <url-pattern>/RepairStateServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 报修类别管理servlet配置 -->
+    <servlet>
+        <servlet-name>RepairClassServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.RepairClassServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RepairClassServlet</servlet-name>
+        <url-pattern>/RepairClassServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 晚归信息管理servlet配置 -->
+    <servlet>
+        <servlet-name>LateComeServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.LateComeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LateComeServlet</servlet-name>
+        <url-pattern>/LateComeServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 公告信息管理servlet配置 -->
+    <servlet>
+        <servlet-name>NoticeServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.NoticeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NoticeServlet</servlet-name>
+        <url-pattern>/NoticeServlet</url-pattern>
+    </servlet-mapping>
+
+ 
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

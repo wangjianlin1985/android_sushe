@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mobileclient.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+         android:targetSdkVersion="8"
+         /> 
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="com.mobileclient.app.Declare">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="MainActivity"></activity>
+        <activity android:name="MoreActivity"></activity>
+        <activity android:name="AboutActivity"></activity>
+        <activity android:name="RegisterActivity"></activity>
+        <activity android:name="MainMenuActivity"></activity>
+        <activity android:name="StudentListActivity"></activity>
+        <activity android:name="StudentQueryActivity"></activity>
+        <activity android:name="StudentAddActivity"></activity>
+        <activity android:name="StudentEditActivity"></activity>
+        <activity android:name="StudentDetailActivity"></activity>
+        <activity android:name="HouseListActivity"></activity>
+        <activity android:name="HouseQueryActivity"></activity>
+        <activity android:name="HouseAddActivity"></activity>
+        <activity android:name="HouseEditActivity"></activity>
+        <activity android:name="HouseDetailActivity"></activity>
+        <activity android:name="RoomListActivity"></activity>
+        <activity android:name="RoomQueryActivity"></activity>
+        <activity android:name="RoomAddActivity"></activity>
+        <activity android:name="RoomEditActivity"></activity>
+        <activity android:name="RoomDetailActivity"></activity>
+        <activity android:name="RepairListActivity"></activity>
+        <activity android:name="RepairQueryActivity"></activity>
+        <activity android:name="RepairAddActivity"></activity>
+        <activity android:name="RepairEditActivity"></activity>
+        <activity android:name="RepairDetailActivity"></activity>
+        <activity android:name="RepairStateListActivity"></activity>
+        <activity android:name="RepairStateQueryActivity"></activity>
+        <activity android:name="RepairStateAddActivity"></activity>
+        <activity android:name="RepairStateEditActivity"></activity>
+        <activity android:name="RepairStateDetailActivity"></activity>
+        <activity android:name="RepairClassListActivity"></activity>
+        <activity android:name="RepairClassQueryActivity"></activity>
+        <activity android:name="RepairClassAddActivity"></activity>
+        <activity android:name="RepairClassEditActivity"></activity>
+        <activity android:name="RepairClassDetailActivity"></activity>
+        <activity android:name="LateComeListActivity"></activity>
+        <activity android:name="LateComeQueryActivity"></activity>
+        <activity android:name="LateComeAddActivity"></activity>
+        <activity android:name="LateComeEditActivity"></activity>
+        <activity android:name="LateComeDetailActivity"></activity>
+        <activity android:name="NoticeListActivity"></activity>
+        <activity android:name="NoticeQueryActivity"></activity>
+        <activity android:name="NoticeAddActivity"></activity>
+        <activity android:name="NoticeEditActivity"></activity>
+        <activity android:name="NoticeDetailActivity"></activity>
+
+        <activity android:name="photoListActivity"></activity>
+        <activity android:name="fileListActivity"></activity>
+    </application>
+
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+
+	<!-- 文件读写权限 -->
+	
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"></uses-permission>
+	
+	
+</manifest>
