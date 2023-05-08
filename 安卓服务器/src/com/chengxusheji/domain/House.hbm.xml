@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="House" table="House">
+
+          <!-- 主键宿舍id -->
+          <id name="houseId" column="houseId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单字符串属性: 宿舍楼名称 -->
+          <property
+            name="houseName"
+            column="houseName"
+            type="string"
+            length="40"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 
